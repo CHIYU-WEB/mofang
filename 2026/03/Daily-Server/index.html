@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="zh"><head>
+<title>我买了一个服务器 - HongLiu的小站</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+
+<link rel="shortcut icon" href="/image/avator_1.jpg" type="image/x-icon" />
+<meta name="description" content="寒假期间，因为想玩服务器，所以购买了腾讯云的一个小服务器，4核4G 3M，一年79块钱。这是我第一次接触服务器相关的东西，不管是云服务器还是本地服务器都没有经验；因此，开一篇文章长期更新，记录服务器的购买、探索、使用及其相关资料。 选型&amp;购买-26.021 确定需求我的需求：搞个Linux的，24小时不断电的小电脑来玩。 配置需求：无，又不是跑mc服务器或者什么大型应用 具体任务设想：跑几">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我买了一个服务器">
+<meta property="og:url" content="https://hongliu.icu/2026/03/Daily-Server/index.html">
+<meta property="og:site_name" content="HongLiu的小站">
+<meta property="og:description" content="寒假期间，因为想玩服务器，所以购买了腾讯云的一个小服务器，4核4G 3M，一年79块钱。这是我第一次接触服务器相关的东西，不管是云服务器还是本地服务器都没有经验；因此，开一篇文章长期更新，记录服务器的购买、探索、使用及其相关资料。 选型&amp;购买-26.021 确定需求我的需求：搞个Linux的，24小时不断电的小电脑来玩。 配置需求：无，又不是跑mc服务器或者什么大型应用 具体任务设想：跑几">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hongliu.icu/image/Daily-Server/1.png">
+<meta property="og:image" content="https://hongliu.icu/image/Daily-Server/2.png">
+<meta property="og:image" content="https://hongliu.icu/image/Daily-Server/3.png">
+<meta property="og:image" content="https://hongliu.icu/image/Daily-Server/4.png">
+<meta property="og:image" content="https://hongliu.icu/image/Daily-Server/5.png">
+<meta property="og:image" content="https://hongliu.icu/image/Daily-Server/7.jpg">
+<meta property="og:image" content="https://hongliu.icu/image/Daily-Server/6.png">
+<meta property="og:image" content="https://img.shields.io/badge/IIIA-2-B97CAC">
+<meta property="article:published_time" content="2026-03-20T15:05:27.000Z">
+<meta property="article:modified_time" content="2026-04-05T15:08:14.453Z">
+<meta property="article:author" content="HongLiu">
+<meta property="article:tag" content="服务器">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="计算机">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hongliu.icu/image/Daily-Server/1.png">
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1782570184326">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<link rel="stylesheet" href="/css/style.css?v=1782570184326">
+
+
+
+
+    
+        <link rel="stylesheet" href="/custom.css?v=1782570184326">
+    
+
+
+
+<script src="/lib/mdui_043tiny/mdui.js" async></script>
+<script src="/lib/fancybox/fancybox.umd.js" async></script>
+<script src="/lib/lax.min.js" async></script>
+
+
+<script async src="/js/app.js?v=1782570184326"></script>
+
+ 
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ee747b5c2e5f5223579bf6411c469fb6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script defer src="https://umami.hongliu.icu/style.css" data-website-id="f89e7e02-e140-4e0b-87bc-99ab9b33505c"></script>
+
+
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/rss.xml" title="HongLiu的小站" type="application/atom+xml">
+</head><body class="nexmoe mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image: url(/image/banner_2.png)"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: &#039;#drawer&#039;, swipe: true}" title="menu"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer"></div><a class="mdui-btn mdui-btn-icon" href="/" title="HongLiu"><img src="/image/avator_1.jpg" alt="HongLiu"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="HongLiu">
+            <img src="/image/avator_1.jpg" alt="HongLiu" alt="HongLiu">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>31</div>
+        <div><span>标签</span>35</div>
+        <div><span>分类</span>7</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/PY.html" title="友情链接">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                友情链接
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about" title="关于">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" target="_blank" rel="noopener" href="https://www.travellings.cn/plain.html" title="开往">
+            <i class="mdui-list-item-icon nexmoefont fa-solid fa-train-subway"></i>
+            <div class="mdui-list-item-content">
+                开往
+            </div>
+        </a>
+        
+    </div>
+    
+    
+        
+        <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="搜索" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
+            </form>
+         
+    </div>
+</div>
+
+
+	<script async src="/js/search.js?v=1782570184327"></script>
+
+
+
+    
+        
+        <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="https://qm.qq.com/q/BqxvpkC1fG"
+			target="_blank"
+			mdui-tooltip="{content: 'QQ'}"
+			style="
+				color: rgb(249, 174, 8);
+				background-color: rgba(249, 174, 8, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-QQ"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://space.bilibili.com/412489247"
+			target="_blank"
+			mdui-tooltip="{content: '哔哩哔哩'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-bilibili"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://github.com/hongliu114"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-github"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://www.zhihu.com/people/dai-fu-dian-de-fan-zhi-zi"
+			target="_blank"
+			mdui-tooltip="{content: '知乎'}"
+			style="
+				color: rgb(30, 136, 229);
+				background-color: rgba(30, 136, 229, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-zhihu"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="/rss.xml"
+			target="_blank"
+			mdui-tooltip="{content: 'RSS'}"
+			style="
+				color: rgb(247, 132, 34);
+				background-color: rgba(247, 132, 34, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-rss"
+			></i> </a
+		>
+	</div>
+</div>
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/其他/">其他</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/手工教程/">手工教程</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/技术文档/">技术文档</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/探索日记/">探索日记</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/日常/">日常</a>
+          <span class="category-list-count">6</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/杂谈/">杂谈</a>
+          <span class="category-list-count">8</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/知识笔记/">知识笔记</a>
+          <span class="category-list-count">10</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/HAM/" style="font-size: 10px;">HAM</a> <a href="/tags/RM/" style="font-size: 15px;">RM</a> <a href="/tags/%E4%B9%A6%E7%B1%8D/" style="font-size: 11.67px;">书籍</a> <a href="/tags/%E5%8C%97%E4%BA%AC/" style="font-size: 10px;">北京</a> <a href="/tags/%E5%9B%9E%E5%BF%86/" style="font-size: 10px;">回忆</a> <a href="/tags/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B/" style="font-size: 10px;">国际象棋</a> <a href="/tags/%E5%A4%8D%E5%8F%98/" style="font-size: 10px;">复变</a> <a href="/tags/%E5%A4%AA%E7%A9%BA/" style="font-size: 10px;">太空</a> <a href="/tags/%E5%BC%80%E6%BA%90/" style="font-size: 10px;">开源</a> <a href="/tags/%E6%89%8B%E5%B7%A5/" style="font-size: 10px;">手工</a> <a href="/tags/%E6%8E%A7%E5%88%B6/" style="font-size: 10px;">控制</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 11.67px;">教程</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 10px;">数学</a> <a href="/tags/%E6%95%B0%E7%94%B5/" style="font-size: 10px;">数电</a> <a href="/tags/%E6%96%B0%E5%B9%B4/" style="font-size: 11.67px;">新年</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 15px;">日志</a> <a href="/tags/%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F/" style="font-size: 10px;">明日方舟</a> <a href="/tags/%E6%98%A5%E5%A4%A9/" style="font-size: 11.67px;">春天</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 10px;">服务器</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/" style="font-size: 13.33px;">机器人</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6/" style="font-size: 10px;">机器人学</a> <a href="/tags/%E6%9D%82%E8%B0%88/" style="font-size: 15px;">杂谈</a> <a href="/tags/%E6%A8%A1%E7%94%B5/" style="font-size: 10px;">模电</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 20px;">生活</a> <a href="/tags/%E7%94%B5%E5%AD%90/" style="font-size: 16.67px;">电子</a> <a href="/tags/%E7%94%B5%E5%BD%B1/" style="font-size: 10px;">电影</a> <a href="/tags/%E7%94%B5%E8%B5%9B/" style="font-size: 10px;">电赛</a> <a href="/tags/%E7%A1%AC%E4%BB%B6/" style="font-size: 13.33px;">硬件</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 18.33px;">笔记</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 10px;">网站</a> <a href="/tags/%E8%A5%BF%E5%AE%89/" style="font-size: 13.33px;">西安</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" style="font-size: 13.33px;">计算机</a> <a href="/tags/%E8%AF%97/" style="font-size: 10px;">诗</a> <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" style="font-size: 11.67px;">读书笔记</a> <a href="/tags/%E9%87%8D%E5%BA%86/" style="font-size: 10px;">重庆</a>
+    </div>
+    
+      <script>
+        var maxTagcloud = parseInt(17);
+        var tags_length = parseInt(35);
+        var tags_arr = [];
+        for(var i = 0; i < tags_length; i++){
+          tags_arr.push(i);
+        }
+        tags_arr.sort(function (l, r) {
+          return Math.random() > 0.5 ? -1 : 1;
+        });
+        tags_arr = tags_arr.slice(0, maxTagcloud < tags_length ? tags_length - maxTagcloud : 0);
+        for(var tag_i = 0; tag_i < tags_arr.length; tag_i++){
+          document.getElementById("randomtagcloud").children[tags_arr[tag_i]].style.display = 'none';
+        }
+      </script>
+    
+  </div>
+
+    
+        
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/06/">六月 2026</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/04/">四月 2026</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/03/">三月 2026</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/02/">二月 2026</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/01/">一月 2026</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/12/">十二月 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/11/">十一月 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/10/">十月 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/09/">九月 2025</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/08/">八月 2025</a><span class="archive-list-count">8</span></li></ul>
+    </div>
+  </div>
+
+
+
+    
+        
+        
+        
+   
+    <div class="nexmoe-copyright">
+        &copy; 2026 HongLiu
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        <div id="site-runtime" style="font-size:14px;color:#666;padding:8px;border-radius:6px;">
+  本站已运行: <span id="runtime-text">计算中...</span>
+</div>
+<script>
+  function updateRuntime() {
+    const siteLaunchDate = new Date('2025-08-15T01:25:00'); // 替换为您的建站时间
+    const now = new Date();
+    const diff = now - siteLaunchDate;
+
+    const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24) % 365);
+    const hours = Math.floor(diff / (1000 * 60 * 60) % 24);
+    const minutes = Math.floor(diff / (1000 * 60) % 60);
+    const seconds = Math.floor(diff / 1000 % 60);
+
+    let text = "";
+    if (years > 0) text += `${years} 年 `;
+    text += `${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒`;
+    
+    document.getElementById('runtime-text').innerText = text;
+  }
+  // 初始加载立即执行
+  updateRuntime();
+  // 每秒更新一次
+  setInterval(updateRuntime, 1000);
+</script>
+
+    </div>
+</div><!-- .nexmoe-drawer --></div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
+  <article>
+    
+        <div class="nexmoe-post-cover absolute" style="padding-top: 45.83333333333333%;"> 
+            <img src="image/banner_23.png" alt="我买了一个服务器" loading="lazy">
+            <h1>我买了一个服务器</h1>
+        </div>
+    
+    
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2026年03月20日</a>
+        
+            <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E6%8E%A2%E7%B4%A2%E6%97%A5%E8%AE%B0/">探索日记</a>
+        
+        
+    <a><i class="nexmoefont icon-areachart"></i>约1.9k字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>预计需要6分钟</a>
+
+        
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+    <p>寒假期间，因为想玩服务器，所以购买了腾讯云的一个小服务器，4核4G 3M，一年79块钱。这是我第一次接触服务器相关的东西，不管是云服务器还是本地服务器都没有经验；因此，开一篇文章长期更新，记录服务器的购买、探索、使用及其相关资料。</p>
+<h2 id="选型-购买-26-02"><a href="#选型-购买-26-02" class="headerlink" title="选型&amp;购买-26.02"></a>选型&amp;购买-26.02</h2><h3 id="1-确定需求"><a href="#1-确定需求" class="headerlink" title="1 确定需求"></a>1 确定需求</h3><p>我的需求：搞个Linux的，24小时不断电的小电脑来玩。</p>
+<p>配置需求：无，又不是跑mc服务器或者什么大型应用</p>
+<p>具体任务设想：跑几个小网站或者聊天机器人之类的小应用，但此类应用在本地电脑上因为不24小时运行、不是Linux系统等原因不好实现。</p>
+<p>网络需求：公网IP，国内平台以实现方便连接。</p>
+<h3 id="2-查资料-对比"><a href="#2-查资料-对比" class="headerlink" title="2 查资料&amp;对比"></a>2 查资料&amp;对比</h3><p>明确需求之后我主要参考了这个视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1EZcgz7Ead">【26年2月云服务器选购指南】超详细性价比横评 从对比到选购一站式教程</a>（该教程似乎长期更新，可参考最新一期）</p>
+<p>因为前面博客网站域名也是腾讯云买的，比较熟悉，并且腾讯云有套餐不错，因此在AI辅助对比和大概一天的选择困难症之后，选择了4核4G 带宽3Mbps 系统盘SSD40GB 有公网IP的方案，价格为一年79元。如下：<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-Server/1.png" alt="img" data-caption="img" loading="lazy"></p>
+<p>购买时，选择了Ubuntu Server 24.04 LTS系统。</p>
+<h2 id="基本环境配置"><a href="#基本环境配置" class="headerlink" title="基本环境配置"></a>基本环境配置</h2><p>购买服务器之后，事实上我获得了下列东西：一个腾讯云的信息面板，内含服务器系统信息、当前状态、公网IP、登录密钥等等一系列信息，也包括了一些方便使用的工具，但是我觉得不够方便，所以安装了1Panel面板，并正在购买给这个服务器专用的一个域名。<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-Server/2.png" alt="img" data-caption="img" loading="lazy"></p>
+<h3 id="1-1Panel面板"><a href="#1-1Panel面板" class="headerlink" title="1 1Panel面板"></a>1 1Panel面板</h3><p>购买服务器后，在腾讯云的控制台可以通过免密登录或者比较常规的SSH登录，在终端进入电脑的命令行界面（在自己电脑其他软件也行，腾讯云方便）。我在此进行操作安装了1Panel。</p>
+<p>所谓面板，就是一个图形化的界面，方便用户进行服务器的管理和使用。安装1Panel后，我可以通过浏览器访问这个面板，进行服务器的监控、应用的部署、数据库的管理等等操作，而不需要每次都通过命令行来操作服务器。</p>
+<p>比较主流的面板：宝塔面板、1Panel面板、aaPanel面板等。1Panel面板似乎比较新，我其实无所谓，随便选了。<br>1Panel的官方文档：<a target="_blank" rel="noopener" href="https://1panel.cn/docs/v2/">1Panel文档</a></p>
+<p>按照官方文档步骤即可配置完成。部署之后，会有密码和地址，我使用默认端口39149，因此在浏览器输入公网IP:39149即可访问面板，输入密码登录可以到达面板。</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-Server/3.png" alt="img" data-caption="img" loading="lazy"></p>
+<blockquote class="md-note"><div class="md-note-title"><span class="md-note-icon" aria-hidden="true"><svg t="1774016070926" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6524" width="200" height="200"><path d="M512 919.68c-44.16 0-80-35.84-80-80v-384a80 80 0 0 1 160 0v384c0 44.16-35.84 80-80 80zM512 295.68a95.936 95.936 0 0 1-67.84-163.84 93.056 93.056 0 0 1 31.36-21.12c5.76-1.92 11.52-3.84 17.92-5.12a96.32 96.32 0 0 1 107.52 57.6c1.92 5.76 3.84 11.52 5.12 17.92a95.936 95.936 0 0 1-26.24 86.4c-8.96 8.96-19.2 16-30.72 21.12-12.16 4.48-24.32 7.04-37.12 7.04z" p-id="6525"></path></svg></span><span class="md-note-heading">IP和端口</span></div><p>对于公网IP，我的理解是：这台电脑在互联网上可以使用这个地址来代表自己，并且它有很多端口，本地构建网页或者服务之后可以选择一个端口往外映射，通过端口可以访问这个服务。如果在浏览器直接输入公网IP，默认访问的是80端口。</p></blockquote>
+<blockquote class="md-tips"><div class="md-tips-title"><span class="md-tips-icon" aria-hidden="true"><svg t="1774016328642" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3577" width="200" height="200"><path d="M512 960c49.6 0 88-38.4 88-88H424c0 49.6 38.4 88 88 88z m288.8-286.4V444.8c0-137.6-97.6-252.8-224.8-283.2v-28.8c0-32-17.6-60.8-48-67.2-44-10.4-80 23.2-80 66.4v30.4C320.8 192 223.2 307.2 223.2 444.8v228.8L136 763.2v44.8h752v-44.8l-87.2-89.6z" p-id="3578"></path></svg></span><span class="md-tips-heading">用端口记得开防火墙</span></div><p>搞1Panel面板以及后面一些用到WebUI界面的东西的时候，好几次一直进入不了端口对应的网页，查到最后才发现是防火墙没有开。并且服务器本身的防火墙和腾讯云那边的防火墙都要设置开放端口，前者我在1Panel的界面可以很方便地调整，也可以命令行控制但是麻烦点<del>我也背不了那么多命令</del>，后者在腾讯云控制台开启，二者是独立的，必须都开启才能开放端口。</p></blockquote>
+<p>然后就可以探索1Panel面板了，我主要发现的是，它的应用商店可以比较方便地用Docker的方式（<a href="">Docker是什么？</a>）部署一些常用的应用。另外可以有比较直观的监测，和SSH端口界面。</p>
+<h3 id="2-VS-Code远程连接"><a href="#2-VS-Code远程连接" class="headerlink" title="2 VS Code远程连接"></a>2 VS Code远程连接</h3><p>安装面板之后，进行了一些基本的尝试，发现编辑代码的时候，仅仅依靠SSH面板，或者手动上传文件到服务器是非常不顺手的，再加上原本习惯使用VS Code（以及它的Copilot），所以查阅了教程，安装了Remote-SSH并且很方便地用上了。</p>
+<p>参考教程：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/661255803">vscode使用ssh远程连接实验室服务器</a></p>
+<p>配置过程基本依靠AI，其实感觉就是正常的SSH连接，然后我配置了SSH密钥文件以免重复输入密码。</p>
+<h3 id="3-域名配置（进行中）"><a href="#3-域名配置（进行中）" class="headerlink" title="3 域名配置（进行中）"></a>3 域名配置（进行中）</h3><p>虽然原本已经有了给博客用的域名<a href="hongliu.icu">hongliu.icu</a>，但比较尴尬的是我的博客网站搭建在境外的Github Pages上，并不需要备案，而腾讯云的服务器在国内（需要备案才能正常解析），因此需要一个新的域名来绑定这个服务器。于是我购买了hongliu.xyz这个域名，准备绑定到服务器上。目前正在进行ICP备案，这个二级域名可能会直接解析到我下文所说的实验网页中。</p>
+<p>域名依然购买于腾讯云，我主要参考的是腾讯云的ICP备案文档：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/243/45097">腾讯云ICP备案</a></p>
+<p><em>最新消息：备案已通过</em></p>
+<h2 id="开始整活"><a href="#开始整活" class="headerlink" title="开始整活"></a>开始整活</h2><h3 id="Astrbot聊天机器人"><a href="#Astrbot聊天机器人" class="headerlink" title="Astrbot聊天机器人"></a>Astrbot聊天机器人</h3><p><em>小时候最想玩的一集</em></p>
+<p>一个接入了LLM的聊天机器人（我使用的是deepseek），接入到QQ小号里实现无聊时和AI的互相骚扰。</p>
+<p><a target="_blank" rel="noopener" href="https://docs.astrbot.app/">官方文档</a></p>
+<p>我使用的是1Panel内应用商店的部署，很方便。部署后在1Panel容器里可以看到asterbot开着。看WebUI的时候记得和上文一样开端口。</p>
+<p>然后就是接入QQ，接入QQ需要一个小号，并借助另外一个项目：Napcat，来实现QQ和Astrbot的连接。Napcat的官方文档：<a target="_blank" rel="noopener" href="https://napneko.github.io/guide/start-install">Napcat文档</a>，安装过程是非常类似的，也有文档。</p>
+<p>Astrbot面板（好看好看）：</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-Server/4.png" alt="img" data-caption="img" loading="lazy"></p>
+<p>配置下使用AI的API密钥什么的（很简单，购买-获取密钥-填入），再配置AI人格（提示词），就可以正常使用了。在使用中，Astrbot主要有以下几个东西比较两眼：</p>
+<ul>
+<li>插件很多，我配置了记忆相关的插件、QQ使用优化插件、随机主动发消息插件，提高了很多能力</li>
+</ul>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-Server/5.png" alt="img" data-caption="img" loading="lazy"></p>
+<ul>
+<li>主动Agent，其可以在自身环境或沙盒环境中自行写代码并执行一些任务，这令我很惊讶，有点Openclaw的感觉。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-Server/7.jpg" alt="img" data-caption="img" loading="lazy"></th>
+<th><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-Server/6.png" alt="img" data-caption="img" loading="lazy"></th>
+</tr>
+</thead>
+</table>
+<h3 id="静态小网页"><a href="#静态小网页" class="headerlink" title="静态小网页"></a>静态小网页</h3><p>一直想做一点有奇怪小功能的小网页。例如这个大佬的网站：<a target="_blank" rel="noopener" href="https://lab.magiconch.com/">神奇海螺试验场</a>。</p>
+<p>目前自己搭建了一个<a target="_blank" rel="noopener" href="https://hongliu.xyz/">简单的主页</a>，制作了一个mc实时时钟界面（纯Vibe Coding的）</p>
+<h3 id="wiki-js笔记文档网站"><a href="#wiki-js笔记文档网站" class="headerlink" title="wiki.js笔记文档网站"></a>wiki.js笔记文档网站</h3><p>使用wiki.js,把原本在Obsidian上的笔记库传到了在线网站上。</p>
+<p>链接：<a target="_blank" rel="noopener" href="https://gmp.hongliu.xyz/">General M-P Base</a></p>
+<p>感想是：wiki.js比原本想象中的容易好多，很容易就部署了，编辑也很容易。不过这一次我只是作为一个Obsidian的在线显示使用，其实有点大材小用。</p>
+<hr>
+<p>本文持续更新<br>最后更新于2026-04-05</p>
+<p>本文章AI参与指数：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/ErSanSan233/IIIA"><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://img.shields.io/badge/IIIA-2-B97CAC" alt="IIIA-2" data-caption="IIIA-2" loading="lazy"></a></p>
+
+    
+  </article>
+
+  
+      
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">服务器</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" rel="tag">计算机</a>
+    
+</div>
+  
+  
+    <script async src="/js/copy-codeblock.js?v=1782570183719"></script>
+  
+
+  
+      <div class="nexmoe-post-footer">
+          <div id="comment-card" class="comment-card">
+  <div class="main-title-bar">
+    <div class="main-title-dot"></div>
+    <div class="main-title">评论</div>
+  </div>
+  <div id="twikoo" class="twikoo-container">
+    <div class="twikoo-loading">评论加载中…</div>
+    <div class="twikoo-error" style="display:none;color:#999;margin-top:8px;">评论加载失败，若持续失败请联系站长或稍后重试。</div>
+  </div>
+</div>
+<script>
+  // 动态注入 Twikoo 脚本并添加错误回退
+  (function(){
+    function tryLoad(src, onload, onerror){
+      var s = document.createElement('script');
+      s.src = src;
+      s.async = true;
+      s.onload = onload;
+      s.onerror = onerror;
+      (document.head || document.body).appendChild(s);
+    }
+
+    function showError(){
+      var err = document.querySelector('#twikoo .twikoo-error');
+      var load = document.querySelector('#twikoo .twikoo-loading');
+      if(load) load.style.display = 'none';
+      if(err) err.style.display = 'block';
+    }
+
+    function initTwikoo(){
+      try{
+        var env = 'https://twikoo-hongliuicu.vercel.app';
+        if(!twikoo || typeof twikoo.init !== 'function'){
+          showError();
+          return;
+        }
+        twikoo.init({
+          envId: env,
+          el: '#twikoo',
+          path: location.pathname,
+          visitor: false
+        });
+        setTimeout(function(){
+          var container = document.getElementById('twikoo');
+          var load = container.querySelector('.twikoo-loading');
+          if(load) load.style.display = 'none';
+          if(container && container.children.length <= 1){
+            showError();
+          }
+        }, 5000);
+      }catch(e){
+        showError();
+      }
+    }
+
+    // 先尝试加载站点同源文件，减少被追踪阻止的概率；若失败再回退到 CDN
+    tryLoad('/js/twikoo.all.min.js', initTwikoo, function(){
+      // fallback to CDN (may still be blocked by tracking prevention)
+      tryLoad('https://cdn.staticfile.org/twikoo/1.6.26/twikoo.all.min.js', initTwikoo, showError);
+    });
+  })();
+</script>
+
+      </div>
+  
+</div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
+        <div class="nexmoe-tool">
+
+            
+
+            
+            
+            <button class="mdui-fab catalog" style="overflow:unset;">
+                <i class="nexmoefont icon-i-catalog"></i>
+                <div class="nexmoe-toc">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E5%9E%8B-%E8%B4%AD%E4%B9%B0-26-02"><span class="toc-number">1.</span> <span class="toc-text">选型&amp;购买-26.02</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%A1%AE%E5%AE%9A%E9%9C%80%E6%B1%82"><span class="toc-number">1.1.</span> <span class="toc-text">1 确定需求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9F%A5%E8%B5%84%E6%96%99-%E5%AF%B9%E6%AF%94"><span class="toc-number">1.2.</span> <span class="toc-text">2 查资料&amp;对比</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">基本环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1Panel%E9%9D%A2%E6%9D%BF"><span class="toc-number">2.1.</span> <span class="toc-text">1 1Panel面板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-VS-Code%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.2.</span> <span class="toc-text">2 VS Code远程连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE%EF%BC%88%E8%BF%9B%E8%A1%8C%E4%B8%AD%EF%BC%89"><span class="toc-number">2.3.</span> <span class="toc-text">3 域名配置（进行中）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E6%95%B4%E6%B4%BB"><span class="toc-number">3.</span> <span class="toc-text">开始整活</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Astrbot%E8%81%8A%E5%A4%A9%E6%9C%BA%E5%99%A8%E4%BA%BA"><span class="toc-number">3.1.</span> <span class="toc-text">Astrbot聊天机器人</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E5%B0%8F%E7%BD%91%E9%A1%B5"><span class="toc-number">3.2.</span> <span class="toc-text">静态小网页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wiki-js%E7%AC%94%E8%AE%B0%E6%96%87%E6%A1%A3%E7%BD%91%E7%AB%99"><span class="toc-number">3.3.</span> <span class="toc-text">wiki.js笔记文档网站</span></a></li></ol></li></ol>
+                </div>
+            </button>
+            
+
+            
+
+            <a href="#nexmoe-content" class="backtop toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+        </div>
+    </div>
+</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
+</div></body></html>
